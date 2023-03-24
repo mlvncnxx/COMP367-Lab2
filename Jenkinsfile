@@ -84,7 +84,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 // Build the Docker image with the compiled WAR file
-                sh 'docker build -t melanonuevo/maven-java-webapp:$BUILD_NUMBER .'
+                sh 'docker build -t melanonuevo/comp367-maven:$BUILD_NUMBER .'
             }
         }
         stage('Docker Login and Push') {
@@ -94,7 +94,7 @@ pipeline {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
 
                     // Push the Docker image to Docker Hub
-                    sh 'docker push melanonuevo/maven-java-webapp:$BUILD_NUMBER'
+                    sh ' docker push melanonuevo/comp367-maven:tagname
                 }
             }
         }
