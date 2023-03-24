@@ -36,7 +36,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/mlvncnxx/COMP367-Lab2.git'
 
-                withEnv(['/Library/Java/JavaVirtualMachines/openjdk-19.0.1.jdk/Contents/Home/bin']) {
+                withEnv(['/Library/Java/JavaVirtualMachines/openjdk-19.0.1.jdk/Contents/Home']) {
                     sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
             }
