@@ -26,7 +26,12 @@
 pipeline {
     agent any
 
+    environment {
+        JAVA_HOME = '/Library/Java/JavaVirtualMachines/openjdk-19.0.1.jdk/Contents/Home'
+    }
+
     tools {
+        // Install the Maven version configured as "M3" and add it to the path.
         maven "Maven"
         jdk "JDK19"
     }
@@ -34,12 +39,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                // Get some code from a GitHub repository
                 git branch: 'main', url: 'https://github.com/mlvncnxx/COMP367-Lab2.git'
 
-                withEnv(['/Library/Java/JavaVirtualMachines/openjdk-19.0.1.jdk/Contents/Home']) {
-                    sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                }
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                //bat "mvn clean compile"
             }
         }
     }
 }
+
