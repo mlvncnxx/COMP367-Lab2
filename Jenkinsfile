@@ -47,7 +47,8 @@ pipeline {
 
                 //sh 'mvn -f /Users/Mel/Desktop/Winter 2023/COMP 367/COMP367-Lab2/WebApp/pom.xml clean package'
 
-                sh 'cd /Users/Mel/Desktop/Winter\ 2023/COMP\ 367/COMP367-Lab2 && mvn clean package'
+                //sh 'cd /Users/Mel/Desktop/Winter\ 2023/COMP\ 367/COMP367-Lab2 && mvn clean package'
+                sh 'cd /Users/Mel/Desktop/Winter\\ 2023/COMP\\ 367/COMP367-Lab2 && mvn clean package'
 
                 // To run Maven on a Windows agent, use
                 //bat "mvn clean compile"
