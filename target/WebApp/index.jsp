@@ -1,5 +1,4 @@
 <%@ page import="java.util.Calendar" %>
-<%@ page import="java.util.TimeZone" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
@@ -14,13 +13,12 @@
 		}
 
 		Calendar now = Calendar.getInstance();
-		now.setTimeZone(TimeZone.getTimeZone("GMT+0")); // set timezone to GMT+0
 		SimpleDateFormat timeFormat = new SimpleDateFormat("HH");
 		int hour = Integer.parseInt(timeFormat.format(now.getTime()));
 
 		String greeting;
 
-		if (hour >= 0 && hour < 12) {
+		if (hour >= 6 && hour < 12) {
 			greeting = "Good morning, " + name + ", Welcome to COMP367";
 		} else if (hour >= 12 && hour < 18) {
 			greeting = "Good afternoon, " + name + ", Welcome to COMP367";
