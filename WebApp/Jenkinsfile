@@ -27,7 +27,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = '/Library/Java/JavaVirtualMachines/openjdk-19.0.1.jdk/Contents/Home'
+        JAVA_HOME = '/Users/Mel/Library/Java/JavaVirtualMachines/openjdk-19.0.1/Contents/Home'
     }
 
     tools {
