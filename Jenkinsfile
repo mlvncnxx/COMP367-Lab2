@@ -94,7 +94,7 @@ pipeline {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
 
                     // Push the Docker image to Docker Hub
-                    sh ' docker push melanonuevo/comp367-maven:tagname
+                    sh 'docker push melanonuevo/comp367-maven:$BUILD_NUMBER'
                 }
             }
         }
