@@ -1,7 +1,7 @@
 <%@ page import="java.util.Calendar" %>
 <%@ page import="java.util.TimeZone" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<!DOCTYPE html>
+<!DOC TYPE html>
 <html>
 <head>
 	<title>Welcome to COMP367</title>
