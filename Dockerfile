@@ -6,6 +6,3 @@ FROM openjdk:8
 ADD target/WebApp.war WebApp.war
 ENTRYPOINT ["java", "-jar", "WebApp.war"]
 EXPOSE 8081
-
-LABEL name="comp367-maven"
-LABEL version="1.0"
