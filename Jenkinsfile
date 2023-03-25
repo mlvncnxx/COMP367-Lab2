@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', url: 'https://github.com/mlvncnxx/COMP367-Lab2.git'
+                git branch: 'Jenkins', url: 'https://github.com/mlvncnxx/COMP367-Lab2.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
